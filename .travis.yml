@@ -1,18 +1,20 @@
 language: python
 
 python:
-  - "3.4"
-  - "3.5"
+
   - "3.6"
   - "3.7"
-  - "3.8"
 
 install:
   - pip install pipenv
   - pipenv install --dev
 
 script:
-  - pytest tests/
+  - pytest --cov tests/
 
 env:
   - CRAWLY_APP_URL=http://applicant-test.us-east-1.elasticbeanstalk.com
+  - CODECOV_TOKEN=ac776307-e730-469f-b038-21f9f8c628e4
+
+after_success:
+  - codecov
