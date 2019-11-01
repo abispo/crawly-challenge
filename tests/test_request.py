@@ -16,18 +16,18 @@ from tests.fixtures import getpage_content, postpage_content
 
 @pytest.mark.asyncio
 @patch('aiohttp.ClientSession.get')
-async def test_get_token(mock_get):   
+async def test_get_token(mock_get):
     mock_get.return_value.__aenter__.return_value.text = getpage_content()
-       
 
     async with aiohttp.ClientSession() as session:
         retorno = await get_token(session)
 
         assert retorno == '969w1v3u8yz313v4wuv0907712v6395u'
 
+
 @pytest.mark.asyncio
 @patch('aiohttp.ClientSession.post')
-async def test_get_answer(mock_post):   
+async def test_get_answer(mock_post):
     mock_post.return_value.__aenter__.return_value.text = postpage_content()
 
     async with aiohttp.ClientSession() as session:

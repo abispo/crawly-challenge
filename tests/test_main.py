@@ -9,6 +9,7 @@ from tests.fixtures import getpage_content, postpage_content
 
 client = TestClient(app)
 
+
 @pytest.mark.freeze_time('2019-11-02')
 @patch('aiohttp.ClientSession.get')
 @patch('aiohttp.ClientSession.post')
