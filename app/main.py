@@ -39,6 +39,7 @@ async def get_token(session: aiohttp.ClientSession) -> str:
     except Exception as e:
         raise aiohttp.ClientError(str(e))
 
+
 async def get_answer(session: aiohttp.ClientSession, token: str) -> str:
     data = {'token': token}
 

@@ -18,7 +18,7 @@ async def test_transform_token():
 
 @pytest.mark.asyncio
 @patch('aiohttp.ClientSession.get')
-async def test_get_token(mock_get):   
+async def test_get_token(mock_get):
     mock_get.return_value.__aenter__.return_value.text = CoroutineMock(side_effect=[
         """
         <html>
@@ -43,7 +43,7 @@ async def test_get_token(mock_get):
 
 @pytest.mark.asyncio
 @patch('aiohttp.ClientSession.post')
-async def test_get_answer(mock_post):   
+async def test_get_answer(mock_post):
     mock_post.return_value.__aenter__.return_value.text = CoroutineMock(side_effect=[
         """
         RESPOSTA: <span id="answer">11</span><br /><a href="http://applicant-test.us-east-1.elasticbeanstalk.com/">Voltar</a>
