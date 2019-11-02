@@ -24,11 +24,11 @@ Ou ainda acessar a documentação da API em `http://127.0.0.1:8000/docs` ou `htt
 
 ## Executando o projeto usando Docker
 
-> **Pre-requisitos:**
+> **Requisitos:**
 > - Docker 19.03.4
-> - Docker compose 1.24.1
+> - docker-compose 1.24.1
 
-No terminal, digite:
+Execute o comando abaixo no terminal:
 ```bash
 docker-compose up
 ```
@@ -40,10 +40,15 @@ docker exec -it crawly_challenge pipenv run pytest --cov tests/ --disable-warnin
 ```
 
 ## Executando o projeto usando Python com pipenv
-> **Pre-requisitos:**
+> **Requisitos:**
 > - Python 3.6
 > - pip 9.0.1
 > - pipenv 2018.11.26
+
+Crie o arquivo `.env` no diretório raiz do projeto com o seguinte conteúdo:
+```
+CRAWLY_APP_URL=http://applicant-test.us-east-1.elasticbeanstalk.com
+```
 
 Execute os comandos abaixo no terminal:
 ```bash
