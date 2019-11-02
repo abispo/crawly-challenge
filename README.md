@@ -26,7 +26,7 @@ Ou ainda acessar a documentação da API em `http://127.0.0.1:8000/docs` ou `htt
 
 > **Pre-requisitos:**
 > - Docker 19.03.4
-> - Docker composer 1.24.1
+> - Docker compose 1.24.1
 
 No terminal, digite:
 ```bash
