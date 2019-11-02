@@ -13,6 +13,11 @@ git clone https://github.com/abispo/crawly-challenge.git
 cd crawly-challenge
 ```
 
+Crie o arquivo `.env` no diretório raiz do projeto com o seguinte conteúdo:
+```
+CRAWLY_APP_URL=http://applicant-test.us-east-1.elasticbeanstalk.com
+```
+
 O projeto consiste de uma API que retorna o resultado de um crawling em uma página. Depois do projeto instalado e executando, para fazer uma requisição você pode digitar no terminal:
 ```bash
 curl -X GET http://127.0.0.1:8000
